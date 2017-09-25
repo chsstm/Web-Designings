@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day Finder</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="adcalc.js"></script>
+	<script type="text/javascript" src="bscalc.js"></script>
+</head>
+<body>
+	<div class="container">
+		<table>
+			<tr>
+				<td colspan="3"><h2>पुरा मितीबाट बारकाे दिन पत्ता लगाउनुहाेस्।</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<input id="bsyear" type="number" name="" min="0" maxlength="4" placeholder="बर्ष हाल्नुहाेस्" pattern="([0-9][0-9][0-9][0-9])">
+				</td>
+				<td>
+					<select id="bsmonth">
+						<option selected disabled>महिना छान्नुहाेस्</option>
+						<option value='1'>वैशाख</option>
+						<option value='2'>जेष्ठ</option>
+						<option value='3'>अषाढ</option>
+						<option value='4'>साउन</option>
+						<option value='5'>भदाै</option>
+						<option value='6'>असाेज</option>
+						<option value='7'>कात्तिक</option>
+						<option value='8'>मंसिर</option>
+						<option value='9'>पुष</option>
+						<option value='10'>माघ</option>
+						<option value='11'>फाल्गुन</option>
+						<option value='12'>चैत्र</option>
+					</select>
+				</td>
+				<td>
+					<select id="bsday" onfocus="setBSDay()">
+						<option selected disabled>दिन छान्नुहाेस्</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><button onclick="findBS()">पत्ता लगाउनुहाेस्</button><button onclick="resetBS()">खाली बनाउनुहाेस्</button></td>
+			</tr>
+			<tr>
+				<td colspan="3"><p id="bsresult" class="result"></p></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="container">
+		<table>
+			<tr>
+				<td colspan="3"><h2>FIND WEEK-DAY FROM THE FULL DATE</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<input id="adyear" type="number" name="" min="0" maxlength="4" placeholder="Enter Year" pattern="([0-9][0-9][0-9][0-9])">
+				</td>
+				<td>
+					<select id="admonth" onchange="setADDay(this)">
+						<option selected disabled>Select Month</option>
+						<option value='1'>Janaury</option>
+						<option value='2'>February</option>
+						<option value='3'>March</option>
+						<option value='4'>April</option>
+						<option value='5'>May</option>
+						<option value='6'>June</option>
+						<option value='7'>July</option>
+						<option value='8'>August</option>
+						<option value='9'>September</option>
+						<option value='10'>October</option>
+						<option value='11'>November</option>
+						<option value='12'>December</option>
+					</select>
+				</td>
+				<td>
+					<select id="adday">
+						<option selected disabled>Select Day</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><button onclick="findAD()">FIND</button><button onclick="resetAD()">RESET</button></td>
+			</tr>
+			<tr>
+				<td colspan="3"><p id="adresult" class="result"></p></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
