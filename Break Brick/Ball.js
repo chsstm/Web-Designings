@@ -29,7 +29,7 @@ function Ball(){
 	}
 
 	this.hits = function(brick){
-		if(dist(ball.pos.x,ball.pos.y,brick.pos.x,brick.pos.y) < brick.size+this.r){
+		if(dist(ball.pos.x,ball.pos.y,brick.pos.x,brick.pos.y) < brick.size/2+this.r){
 			return true;
 		}
 		return false;
