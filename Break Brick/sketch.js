@@ -38,6 +38,13 @@ function draw(){
 			bricks.splice(i,1);
 		}
 	}
+	if(bricks.length==0){
+		textAlign(CENTER,CENTER);
+		textSize(50);
+		fill(255,0,0);
+		text("You win!",width/2,height/2);
+		playing=false;
+	}
 }
 
 function keyPressed(){
