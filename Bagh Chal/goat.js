@@ -29,22 +29,20 @@ function Goat(x,y){
 	}
 
 	this.show = function(){
-		fill(100,100,200);
 		if(this.active){
-			strokeWeight(4);
-			stroke(0,200,0);
-		}else{
-			noStroke();			
+		}else{		
 		}
-		ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
-		noStroke();
-		fill(255);
-		textSize(12);
-		textStyle(BOLD);
-		textAlign(CENTER,CENTER);
-		if(!this.dead){
-			text("बाख्रा",this.currentPos.x,this.currentPos.y);
-		}
+		imageMode(CENTER);
+		image(goatImg,this.currentPos.x,this.currentPos.y,30,30);
+		// ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
+		// noStroke();
+		// fill(255);
+		// textSize(12);
+		// textStyle(BOLD);
+		// textAlign(CENTER,CENTER);
+		// if(!this.dead){
+		// 	text("बाख्रा",this.currentPos.x,this.currentPos.y);
+		// }
 	}
 
 	this.above = function(mx,my){

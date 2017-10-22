@@ -23,20 +23,20 @@ function Tiger(x,y,x1,y1){
 	}
 
 	this.show = function(){
-		fill(200,50,50);
 		if(this.active){
-			strokeWeight(4);
-			stroke(0,200,0);
+			noTint();
 		}else{
-			noStroke();			
+			tint(200);		
 		}
-		ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
-		noStroke();
-		fill(255);
-		textSize(16);
-		textStyle(BOLD);
-		textAlign(CENTER,CENTER);
-		text("बाघ",this.currentPos.x,this.currentPos.y);
+		imageMode(CENTER);
+		image(tigerImg,this.currentPos.x,this.currentPos.y,30,30);
+		// ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
+		// noStroke();
+		// fill(255);
+		// textSize(16);
+		// textStyle(BOLD);
+		// textAlign(CENTER,CENTER);
+		// text("बाघ",this.currentPos.x,this.currentPos.y);
 	}
 
 	this.above = function(mx,my){

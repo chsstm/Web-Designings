@@ -14,6 +14,13 @@ var winner;
 var gameOn=false;
 var players;
 var startBtn1,startBtn2,replayBtn;
+var tigerImg;
+var goatImg;
+
+function preload(){
+	tigerImg = loadImage("images/tiger.png");
+	goatImg = loadImage("images/goat.png");
+}
 
 function make2DArray(r,c){
 	var array=new Array(c);

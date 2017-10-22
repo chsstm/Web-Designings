@@ -1,4 +1,4 @@
-function steup(){
+function setup(){
 
 }
 
