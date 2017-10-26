@@ -30,7 +30,7 @@ function Goat(x,y){
 
 	this.show = function(){
 		if(this.active){
-			image(agoatImg,this.currentPos.x,this.currentPos.y,50,50);
+			image(agoatImg,this.currentPos.x,this.currentPos.y,60,60);
 		}else{		
 			image(goatImg,this.currentPos.x,this.currentPos.y,50,50);
 		}

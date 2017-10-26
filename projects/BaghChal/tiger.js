@@ -24,7 +24,7 @@ function Tiger(x,y,x1,y1){
 
 	this.show = function(){
 		if(this.active){
-			image(atigerImg,this.currentPos.x,this.currentPos.y,50,50);
+			image(atigerImg,this.currentPos.x,this.currentPos.y,60,60);
 		}else{
 			image(tigerImg,this.currentPos.x,this.currentPos.y,50,50);
 		}
