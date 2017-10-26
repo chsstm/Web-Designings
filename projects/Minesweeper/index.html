@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper</title>
+  <script src="libraries/p5.js" type="text/javascript"></script>
+
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+  <script src="sketch.js" type="text/javascript"></script>
+  <script src="cell.js" type="text/javascript"></script>
+
+  <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} 
+    p{
+      margin: 0px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      background-color: black;
+      color: red;
+      box-shadow: 1px 1px 4px grey;
+    }
+
+    span{
+      margin: 0px;
+      text-align: center;
+      line-height: 30px;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      box-shadow: 1px 1px 4px grey;      
+    }
+
+    button,select{
+      color: black;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    button:disabled,select:disabled{
+      cursor: not-allowed;
+      color: lightgrey;
+    }
+  </style>
+</head>
+<body oncontextmenu='return false;'>
+</body>
+</html>

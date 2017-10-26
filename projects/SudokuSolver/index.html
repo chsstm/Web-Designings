@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sudoku Solver / SS</title>
+	<link rel="stylesheet" type="text/css" href="ss.css"/>
+	<script type="text/javascript" src="events.js"></script>
+	<script type="text/javascript" src="alertbox.js"></script>
+</head>
+<body onload="onLoad()">
+	<div id="title-div"><h2 id="title">S U D O K U &nbsp; &nbsp; S O L V E R</h2></div>
+	<div id="boxes-div">		
+		<div id="action-div">
+			<button id="solve" onclick="initiate()">SOLVE</button>
+			<button id="reset" style="background-color: red;" onclick="reset(this)" disabled>Reset Sudoku</button>
+			<button id="clear" style="background-color: red;" onclick="clearBox()">Clear Sudoku</button>
+		</div>
+		<table>
+			<tr>
+				<th>R/C</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+			</tr>
+			<tr>
+				<th>1</th>	
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>5</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>6</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>8</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+			<tr>
+				<th>9</th>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+				<td><input name="textbox[]" type="text" maxlength="1"/></td>
+			</tr>
+		</table>
+	</div>
+	<div id="alertBox">
+		<div id="content">
+			<div id="modelHead">
+				<h2 id="alertHead">Alert !</h2><span id="xBtn" onclick="alertBox.closeBox()">&times;</span>
+			</div>
+			<div id="modelBody">
+				<p id="alertMessage"></p>
+				<button id="closeBtn" onclick="alertBox.closeBox()">OK</button>
+			</div>
+		</div>
+	</div>
+	<div id="developers-div">
+		<a href="https://www.facebook.com/chsstm" target="new">
+			<div class="developer">	
+				<img class="image" src="developers/SaimonIcon.png"/>
+				<div class="desc">
+					<table>
+						<tr><th>Name:</th><td>Saimon Thada Magar<td></tr>
+						<tr><th>Pursuing:</th><td>B.Tech CSE</td></tr>
+						<tr><th>College:</th><td>BFCET, Bathinda</td></tr>
+						<tr><th>Address:</th><td>Rampur-6, Palpa, Nepal</td></tr>
+						<tr><th>Knowledge:</th><td>C++, JAVA, Web Designing, Photoshop, MS-Office etc.</td></tr>
+						<tr><th>Hobbies:</th><td>Programming, Sports, Singing, Travelling, Reading etc.</td></tr>
+					</table>
+				</div>		
+			</div>
+		</a>
+		<a href="https://www.facebook.com/sumit.poudel.111" target="new">
+			<div class="developer">
+				<img class="image" src="developers/SumitIcon.png"/>
+				<div class="desc">	
+					<table>
+						<tr><th>Name:</th><td>Sumit Poudel<td></tr>
+						<tr><th>Pursuing:</th><td>B.Tech CSE</td></tr>
+						<tr><th>College:</th><td>BFCET, Bathinda</td></tr>
+						<tr><th>Address:</th><td>Rampur-6, Palpa, Nepal</td></tr>
+						<tr><th>Knowledge:</th><td>C++, JAVA, Web Designing, Photoshop, MS-Office etc.</td></tr>
+						<tr><th>Hobbies:</th><td>Programming, Drawing, Music, Reading etc.</td></tr>
+					</table>		
+				</div>
+			</div>
+		</a>
+	</div>
+</body>
+</html>
