@@ -51,9 +51,9 @@ function keyPressed(){
 	if(!playing){
 		playing = true;
 	}
-	if(key === 'a' || key === 'A'){
+	if(keyCode === LEFT_ARROW){
 		paddle.movingLeft = true;
-	}else if(key === 'd' || key === 'D'){
+	}else if(keyCode === RIGHT_ARROW){
 		paddle.movingRight = true;
 	}
 }

@@ -7,6 +7,7 @@ function Brick(pos,size){
 		noFill();
 		strokeWeight(1);
 		stroke(255,0,0);
-		ellipse(this.pos.x,this.pos.y,this.size,this.size);
+		rectMode(CENTER);
+		rect(this.pos.x,this.pos.y,this.size,this.size);
 	}
 }
