@@ -1,13 +1,13 @@
 [
-	{"title": "Bagh Chal","url":"baghchal/","icon":"demo.png"},
-	{"title": "Brick Break","url":"brickbreak/","icon":"demo.png"},
-	{"title": "Calculator","url":"calculator/","icon":"demo.png"},
-	{"title": "Day Finder","url":"dayfinder/","icon":"demo.png"},
-	{"title": "Ice Pong","url":"icepong/","icon":"demo.png"},
-	{"title": "Matrix Rain","url":"matrixrain/","icon":"demo.png"},
-	{"title": "Maze","url":"maze/","icon":"demo.png"},
-	{"title": "Minesweeper","url":"minesweeper/","icon":"demo.png"},
-	{"title": "Snake","url":"snake/","icon":"demo.png"},
-	{"title": "Sudoku Solver","url":"sudokusolver/","icon":"demo.png"},
-	{"title": "Tic Tac Toe","url":"tictactoe/","icon":"demo.png"}
+	{"title": "Bagh Chal","url":"BaghChal","icon":"baghchal.png"},
+	{"title": "Brick Break","url":"BrickBreak","icon":"brickbreak.png"},
+	{"title": "Calculator","url":"Calculator","icon":"calculator.png"},
+	{"title": "Day Finder","url":"DayFinder","icon":"dayfinder.png"},
+	{"title": "Ice Pong","url":"IcePong","icon":"icepong.png"},
+	{"title": "Matrix Rain","url":"MatrixRain","icon":"matrixrain.png"},
+	{"title": "Maze","url":"Maze","icon":"maze.png"},
+	{"title": "Minesweeper","url":"Minesweeper","icon":"minesweeper.png"},
+	{"title": "Snake","url":"Snake","icon":"snake.png"},
+	{"title": "Sudoku Solver","url":"SudokuSolver","icon":"sudokusolver.png"},
+	{"title": "Tic Tac Toe","url":"TicTacToe","icon":"tictactoe.png"}
 ]

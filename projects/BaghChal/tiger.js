@@ -24,12 +24,10 @@ function Tiger(x,y,x1,y1){
 
 	this.show = function(){
 		if(this.active){
-			noTint();
+			image(atigerImg,this.currentPos.x,this.currentPos.y,50,50);
 		}else{
-			tint(200);		
+			image(tigerImg,this.currentPos.x,this.currentPos.y,50,50);
 		}
-		imageMode(CENTER);
-		image(tigerImg,this.currentPos.x,this.currentPos.y,30,30);
 		// ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
 		// noStroke();
 		// fill(255);

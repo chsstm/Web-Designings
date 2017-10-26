@@ -30,10 +30,10 @@ function Goat(x,y){
 
 	this.show = function(){
 		if(this.active){
+			image(agoatImg,this.currentPos.x,this.currentPos.y,50,50);
 		}else{		
+			image(goatImg,this.currentPos.x,this.currentPos.y,50,50);
 		}
-		imageMode(CENTER);
-		image(goatImg,this.currentPos.x,this.currentPos.y,30,30);
 		// ellipse(this.currentPos.x,this.currentPos.y,2*this.r,2*this.r);
 		// noStroke();
 		// fill(255);

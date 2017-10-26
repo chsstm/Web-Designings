@@ -1,5 +1,5 @@
 function popup(project){
-	$(".iframe").attr("src","projects/"+$(project).children().val());
+	$(".iframe").attr("src","projects/"+$(project).children().val()+"/");
 	$(".pop-up").fadeIn();
 	$(".iframe").focus();
 }
@@ -10,8 +10,8 @@ $(document).ready(function(){
 			$("#container").append(
 				"<div class='project-wrapper' onclick='popup(this)'>"+
 				"<input class='url' type='hidden' value='"+project.url+"'>"+
-				"<img class='project-icon' src='images/"+project.icon+"'>"+
-				"<h2>"+project.title+"</h2>"+
+				"<img class='project-icon' src='images/"+project.icon+"' onerror=\"this.src='images/demo.png'\">"+
+				"<h2 class='project-title'>"+project.title+"</h2>"+
 				"</div>"
 				);		
 		});

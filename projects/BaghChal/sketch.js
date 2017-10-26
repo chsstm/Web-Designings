@@ -14,12 +14,14 @@ var winner;
 var gameOn=false;
 var players;
 var startBtn1,startBtn2,replayBtn;
-var tigerImg;
-var goatImg;
+var atigerImg,tigerImg;
+var agoatImg,goatImg;
 
 function preload(){
 	tigerImg = loadImage("images/tiger.png");
 	goatImg = loadImage("images/goat.png");
+	atigerImg = loadImage("images/atiger.png");
+	agoatImg = loadImage("images/agoat.png");
 }
 
 function make2DArray(r,c){
@@ -59,6 +61,7 @@ function gameOverNow(w){
 
 function setup() {
 	createCanvas(1060,660).position((windowWidth-width)/2,(windowHeight-height)/2);
+	imageMode(CENTER);
 	goatDPos=createVector(bSize+50+2*leftL,250);
 	tigerDPos=createVector(330,330);
 	spots=make2DArray(rows,cols);
