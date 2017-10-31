@@ -1,13 +1,14 @@
 [
+	{"title": "Agar.io","url":"Agar.io","icon":"agario.png"},
 	{"title": "Bagh Chal","url":"BaghChal","icon":"baghchal.png"},
 	{"title": "Brick Break","url":"BrickBreak","icon":"brickbreak.png"},
 	{"title": "Calculator","url":"Calculator","icon":"calculator.png"},
+	{"title": "Classic Snake","url":"ClassicSnake","icon":"classicsnake.png"},
 	{"title": "Day Finder","url":"DayFinder","icon":"dayfinder.png"},
 	{"title": "Ice Pong","url":"IcePong","icon":"icepong.png"},
 	{"title": "Matrix Rain","url":"MatrixRain","icon":"matrixrain.png"},
 	{"title": "Maze","url":"Maze","icon":"maze.png"},
 	{"title": "Minesweeper","url":"Minesweeper","icon":"minesweeper.png"},
-	{"title": "Snake","url":"Snake","icon":"snake.png"},
 	{"title": "Sudoku Solver","url":"SudokuSolver","icon":"sudokusolver.png"},
 	{"title": "Tic Tac Toe","url":"TicTacToe","icon":"tictactoe.png"}
 ]

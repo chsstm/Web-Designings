@@ -17,6 +17,8 @@ $(document).ready(function(){
 		});
 	}});
 
+	$("#container").focus();
+
 	$(".close-btn").click(function(){
 		$(".iframe").attr("src","");
 		$(".pop-up").fadeOut();

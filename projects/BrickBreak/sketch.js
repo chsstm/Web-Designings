@@ -1,41 +1,35 @@
 var paddle;
 var ball;
-var wWidth=500;
-var wHeight=500;
 var playing = false;
 var bricks = [];
+var bWidth = 100;
+var bHeight = 25;
+var gap = 5;
+
 function setup(){
-	createCanvas(wWidth,wHeight).position((windowWidth-wWidth)/2,(windowHeight-wHeight)/2);
+	createCanvas(windowWidth,windowHeight);
 	paddle = new Paddle();
 	ball = new Ball();
-	for(var i=0; i<50; i++){
-		var size = 20;
-		var pos = createVector(random(50,width-50),random(50,height/2-50));
-		if(random()>.2){
-			size = 40;
-		}else if(random()>.5){
-			size = 80;
+	for(var i=0; i<floor(width/(bWidth+gap)); i++){
+		for(var j=0; j<5; j++){	
+			var padding = (width-(bWidth+gap)*floor(width/(bWidth+gap)))/2;
+			var pos = createVector(i*bWidth+(i+1)*gap+padding,j*bHeight+(j+1)*gap+padding);
+			bricks.push(new Brick(pos,bWidth,bHeight,color(random(100,200),random(100,200),random(100,200))));
 		}
-		bricks.push(new Brick(pos,size));
 	}
 }
 
 function draw(){
 	background(100);
-	paddle.show();
-	ball.show();
 	if(playing){
 		ball.update();
 		paddle.update(5);		
 	}
-	for(var i=0; i<bricks.length; i++){
+	for(var i=bricks.length-1; i>=0; i--){
 		bricks[i].show();
-		if(ball.hits(bricks[i])){
-			bricks[i].size /=2;
-			ball.yv = -ball.yv;
-		}
-		if(bricks[i].size<20){
+		if(bricks[i].hits(ball)){
 			bricks.splice(i,1);
+			ball.yv = -ball.yv;
 		}
 	}
 	if(bricks.length==0){
@@ -45,16 +39,20 @@ function draw(){
 		text("You win!",width/2,height/2);
 		playing=false;
 	}
+
+	paddle.show();
+	ball.show();
 }
 
 function keyPressed(){
 	if(!playing){
 		playing = true;
-	}
-	if(keyCode === LEFT_ARROW){
-		paddle.movingLeft = true;
-	}else if(keyCode === RIGHT_ARROW){
-		paddle.movingRight = true;
+	}else{
+		if(keyCode === LEFT_ARROW){
+			paddle.movingLeft = true;
+		}else if(keyCode === RIGHT_ARROW){
+			paddle.movingRight = true;
+		}
 	}
 }
 
