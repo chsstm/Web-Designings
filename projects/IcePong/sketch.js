@@ -59,8 +59,12 @@ function draw() {
 	if((ball.y-topBorder)<=ball.r || (bottomBorder-ball.y)<=ball.r){
 		ball.yv=-ball.yv;
 	}else if((ball.x-yPluck.x)<=(ball.r+yPluck.thick/2)){
-		if(ball.y>=yPluck.y-yPluck.height/2-30 && ball.y<=yPluck.y+yPluck.height/2+30){
-			ball.xv=-ball.xv;
+		if(ball.y>=yPluck.y-yPluck.height/2-ball.r && ball.y<=yPluck.y+yPluck.height/2+ball.r){
+			var diff = ball.y - yPluck.y;
+			angleMode(DEGREES);
+			var angle = map(diff,-yPluck.height/2,yPluck.height/2,-45,45);
+			ball.yv = 7*sin(angle);
+			ball.xv = 7*cos(angle);
 		}else{
 			cScore++;
 			scoreText.html('Computer Scored!');
@@ -69,8 +73,12 @@ function draw() {
 			scored();
 		}
 	}else if(ball.x+ball.r>=cPluck.x-cPluck.thick/2){
-		if(ball.y>=cPluck.y-cPluck.height/2-30 && ball.y<=cPluck.y+cPluck.height/2+30){
-			ball.xv=-ball.xv;
+		if(ball.y>=cPluck.y-cPluck.height/2-ball.r && ball.y<=cPluck.y+cPluck.height/2+ball.r){
+			var diff = ball.y - cPluck.y;
+			angleMode(DEGREES);
+			var angle = map(diff,-cPluck.height/2,cPluck.height/2,-45,45);
+			ball.yv = 7*sin(angle);
+			ball.xv = -7*cos(angle);
 		}else{
 			yScore++;
 			scoreText.html('You Scored!');
@@ -128,6 +136,7 @@ function AI(){
 }
 
 function board(){	
+	angleMode(RADIANS);
 	strokeWeight(lineThickness);
 	stroke(10,10,200);
 	fill(255);

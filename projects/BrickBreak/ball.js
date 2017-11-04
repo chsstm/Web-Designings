@@ -20,9 +20,10 @@ function Ball(){
 		}else if(this.pos.y+1.5*this.r>=paddle.pos.y-paddle.height/2){
 			if(this.pos.x > paddle.pos.x-paddle.width/2 && this.pos.x < paddle.pos.x+paddle.width/2){
 				var diff = this.pos.x-paddle.pos.x;
-				var angle = map(diff,0,paddle.width,-30,-150);
-				this.xv = 5*cos(angle);
+				angleMode(DEGREES);
+				var angle = map(diff,-paddle.width/2,paddle.width/2,-135,-45);
 				this.yv = 5*sin(angle);
+				this.xv = 5*cos(angle);
 			}else{
 				location.reload();
 			}
