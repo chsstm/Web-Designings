@@ -16,7 +16,7 @@ function ClassicAgarIo(){
 		for(var i=this.blobs.length-1; i>=0; i--){
 			this.blobs[i].show();
 			if(this.blobs[i].hits(this.blob)){
-				this.blob.size += this.blobs[i].size*.005;
+				this.blob.size += this.blobs[i].size*0.05;
 				this.score += this.blobs[i].size*.5;
 				this.blobs.splice(i,1);
 			}

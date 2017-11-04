@@ -5,7 +5,7 @@ function Blob(x,y,size,color){
 
 	this.update = function(){
 		var dir = createVector(mouseX-width/2,mouseY-height/2);
-		dir.setMag(3);
+		dir.setMag(4);
 		this.pos.add(dir);
 	}
 
