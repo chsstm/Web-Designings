@@ -5,6 +5,7 @@
 	{"title": "Calculator","url":"Calculator","icon":"calculator.png"},
 	{"title": "Classic Snake","url":"ClassicSnake","icon":"classicsnake.png"},
 	{"title": "Day Finder","url":"DayFinder","icon":"dayfinder.png"},
+	{"title": "Flappy Bird","url":"FlappyBird","icon":"flappybird.png"},
 	{"title": "Ice Pong","url":"IcePong","icon":"icepong.png"},
 	{"title": "Matrix Rain","url":"MatrixRain","icon":"matrixrain.png"},
 	{"title": "Maze","url":"Maze","icon":"maze.png"},
