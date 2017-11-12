@@ -8,7 +8,7 @@ $(document).ready(function(){
 	$.ajax({url:"js/files.json",success: function(result){
 		result.forEach(function(project){
 			$("#container").append(
-				"<div class='project-wrapper' onclick='popup(this)'>"+
+				"<div class='project-wrapper project "+project.platform.toLowerCase().replace(".","")+"' onclick='popup(this)'>"+
 					"<input class='url' type='hidden' value='"+project.url+"'>"+
 					"<img class='project-icon' src='images/"+project.icon+"' onerror=\"this.src='images/demo.png'\">"+
 					"<div class='project-info'>"+
@@ -25,5 +25,24 @@ $(document).ready(function(){
 	$(".close-btn").click(function(){
 		$(".iframe").attr("src","");
 		$(".pop-up").fadeOut();
+	});
+
+	$(".all").click(function(){
+		$(".project").show();
+	});
+
+	$(".javascript").click(function(){
+		$(".project").hide();
+		$(".javascript").show();
+	});
+
+	$(".p5js").click(function(){
+		$(".project").hide();
+		$(".p5js").show();
+	});
+
+	$(".unity").click(function(){
+		$(".project").hide();
+		$(".unity").show();
 	});
 });
