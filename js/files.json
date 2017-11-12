@@ -5,11 +5,11 @@
 	{"title": "Calculator", "platform": "p5.js", "url": "Calculator", "icon": "calculator.png"},
 	{"title": "Classic Snake", "platform": "p5.js", "url": "ClassicSnake", "icon": "classicsnake.png"},
 	{"title": "Day Finder", "platform": "p5.js", "url": "DayFinder", "icon": "dayfinder.png"},
-	{"title": "Tapy Bird", "platform": "Unity", "url": "TapyBird", "icon": "tapybird.png"},
 	{"title": "Ice Pong", "platform": "p5.js", "url": "IcePong", "icon": "icepong.png"},
 	{"title": "Matrix Rain", "platform": "p5.js", "url": "MatrixRain", "icon": "matrixrain.png"},
 	{"title": "Maze", "platform": "p5.js", "url": "Maze", "icon": "maze.png"},
 	{"title": "Minesweeper", "platform": "p5.js", "url": "Minesweeper", "icon": "minesweeper.png"},
 	{"title": "Sudoku Solver", "platform": "JavaScript", "url": "SudokuSolver", "icon": "sudokusolver.png"},
+	{"title": "Tapy Bird", "platform": "Unity", "url": "TapyBird", "icon": "tapybird.png"},
 	{"title": "Tic Tac Toe", "platform": "p5.js", "url": "TicTacToe", "icon": "tictactoe.png"}
 ]
