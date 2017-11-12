@@ -1,0 +1,12 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Tapy Bird.data.unityweb",
+"asmCodeUrl": "Tapy Bird.asm.code.unityweb",
+"asmMemoryUrl": "Tapy Bird.asm.memory.unityweb",
+"asmFrameworkUrl": "Tapy Bird.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Tapy Bird.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}
