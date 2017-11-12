@@ -9,9 +9,12 @@ $(document).ready(function(){
 		result.forEach(function(project){
 			$("#container").append(
 				"<div class='project-wrapper' onclick='popup(this)'>"+
-				"<input class='url' type='hidden' value='"+project.url+"'>"+
-				"<img class='project-icon' src='images/"+project.icon+"' onerror=\"this.src='images/demo.png'\">"+
-				"<h2 class='project-title'>"+project.title+"</h2>"+
+					"<input class='url' type='hidden' value='"+project.url+"'>"+
+					"<img class='project-icon' src='images/"+project.icon+"' onerror=\"this.src='images/demo.png'\">"+
+					"<div class='project-info'>"+
+						"<h2 class='project-title'>"+project.title+"</h2>"+
+						"<p>{"+project.platform+"}</p>"+
+					"</div>"+
 				"</div>"
 				);		
 		});

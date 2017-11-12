@@ -1,15 +1,15 @@
 [
-	{"title": "Agar.io","url":"Agar.io","icon":"agario.png"},
-	{"title": "Bagh Chal","url":"BaghChal","icon":"baghchal.png"},
-	{"title": "Brick Break","url":"BrickBreak","icon":"brickbreak.png"},
-	{"title": "Calculator","url":"Calculator","icon":"calculator.png"},
-	{"title": "Classic Snake","url":"ClassicSnake","icon":"classicsnake.png"},
-	{"title": "Day Finder","url":"DayFinder","icon":"dayfinder.png"},
-	{"title": "Tapy Bird","url":"TapyBird","icon":"tapybird.png"},
-	{"title": "Ice Pong","url":"IcePong","icon":"icepong.png"},
-	{"title": "Matrix Rain","url":"MatrixRain","icon":"matrixrain.png"},
-	{"title": "Maze","url":"Maze","icon":"maze.png"},
-	{"title": "Minesweeper","url":"Minesweeper","icon":"minesweeper.png"},
-	{"title": "Sudoku Solver","url":"SudokuSolver","icon":"sudokusolver.png"},
-	{"title": "Tic Tac Toe","url":"TicTacToe","icon":"tictactoe.png"}
+	{"title": "Agar.io", "platform": "p5.js", "url": "Agar.io", "icon": "agario.png"},
+	{"title": "Bagh Chal", "platform": "p5.js", "url": "BaghChal", "icon": "baghchal.png"},
+	{"title": "Brick Break", "platform": "p5.js", "url": "BrickBreak", "icon": "brickbreak.png"},
+	{"title": "Calculator", "platform": "p5.js", "url": "Calculator", "icon": "calculator.png"},
+	{"title": "Classic Snake", "platform": "p5.js", "url": "ClassicSnake", "icon": "classicsnake.png"},
+	{"title": "Day Finder", "platform": "p5.js", "url": "DayFinder", "icon": "dayfinder.png"},
+	{"title": "Tapy Bird", "platform": "Unity", "url": "TapyBird", "icon": "tapybird.png"},
+	{"title": "Ice Pong", "platform": "p5.js", "url": "IcePong", "icon": "icepong.png"},
+	{"title": "Matrix Rain", "platform": "p5.js", "url": "MatrixRain", "icon": "matrixrain.png"},
+	{"title": "Maze", "platform": "p5.js", "url": "Maze", "icon": "maze.png"},
+	{"title": "Minesweeper", "platform": "p5.js", "url": "Minesweeper", "icon": "minesweeper.png"},
+	{"title": "Sudoku Solver", "platform": "JavaScript", "url": "SudokuSolver", "icon": "sudokusolver.png"},
+	{"title": "Tic Tac Toe", "platform": "p5.js", "url": "TicTacToe", "icon": "tictactoe.png"}
 ]
