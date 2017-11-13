@@ -6,6 +6,7 @@ function popup(project){
 
 $(document).ready(function(){
 	$.ajax({url:"js/files.json",success: function(result){
+		$("#container").html("");
 		result.forEach(function(project){
 			$("#container").append(
 				"<div class='project-wrapper project "+project.platform.toLowerCase().replace(".","")+"' onclick='popup(this)'>"+
