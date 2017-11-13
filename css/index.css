@@ -83,7 +83,6 @@ header{
 	margin: 10px;
 	float: left;
 	width: 150px;
-	background-color: lightgrey;
 	border: 2px solid #ff383f;
 	transition: .2s;
 }
@@ -94,9 +93,11 @@ header{
 
 .project-icon{
 	position: relative;
-	width: 140px;
-	height: 140px;
-	margin: 5px;
+	float: left;
+	width: 144px;
+	height: 144px;
+	margin: 2px;
+	border: 1px solid lightgrey;
 }
 
 .project-info{
