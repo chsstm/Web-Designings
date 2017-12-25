@@ -8,7 +8,7 @@ header{
 	position: relative;
 	float: left;
 	width: 100%;
-	height: 100px;
+	height: 250px;
 	background-color: #4abdac;
 	box-shadow: 0px 0px 10px grey;
 }
@@ -16,65 +16,67 @@ header{
 .logo-img{
 	position: relative;
 	float: left;
-	width: 100px;
-	height: 100px;
-	margin-left: 50px;
+	height: 100%;
+	margin-left: 20px;
 }
 
 .logo-text{
 	position: relative;
 	float: left;
-	height: 100px;
+	margin: 25px 0px;
+	width: calc(100% - 250px - 20px);
+	height: 200px;
+	text-align: left;
 	line-height: 100px;
-	font-size: 2vw;
+	font-size: 5em;
 }
 
 .filter-div{
 	position: relative;
-	float: right;
-	padding: 20px;
-	height: calc(100% - 40px);
+	width: 100%;
+	height: 100px;
 }
 
-.filter-btn{
-	cursor: pointer;
+.filter-button-div{
+	display: none;
+}
+
+.filter-combo-div{
 	position: relative;
 	float: left;
-	margin: 10px 10px 10px 0px;
-	width: 120px;
-	height: 40px;
-	color: white;
-	font-size: 1em;
-	background-color: #ff383f;
-	border: none;
-	outline: none;
+	width: 100%;
+	height: 100px;
 }
 
-.filter-btn:hover{
-	border: 1px solid black;
+.filter-combo-div select{
+	position: relative;
+	padding-left: 10px;
+	margin: 10px 0px;
+	width: 440px;
+	height: 80px;
+	font-size: 3em;
+	color: #ff383f;
+}
+
+.filter-combo-div select option{
+	cursor: pointer;
+	width: 100%;
+	font-size: .3em;
 }
 
 .container-wrapper{
 	position: relative;
 	float: left;
 	width: 100%;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 250px - 100px);
 	overflow-y: scroll;
 }
 
-.container{
+#project-container{
 	position: absolute;
-	margin: auto;	
+	margin: auto;
 	top: 0px; right: 0px; bottom: 0px; left: 0px;
-	max-width: calc(174 * 6px);
-	height: auto;
-}
-
-#container{
-	position: relative;
-	float: left;
-	width: 100%;
-	padding: 20px 0px;
+	width: 700px;
 }
 
 .project-wrapper{
@@ -82,7 +84,7 @@ header{
 	position: relative;
 	margin: 10px;
 	float: left;
-	width: 150px;
+	width: calc(100% -20px - 4px);
 	border: 2px solid #ff383f;
 	transition: .2s;
 }
@@ -94,18 +96,18 @@ header{
 .project-icon{
 	position: relative;
 	float: left;
-	width: 144px;
-	height: 144px;
+	width: calc(100% - 14px);
+	height: 650px;
 	margin: 2px;
-	border: 1px solid lightgrey;
+	border: 5px solid white;
 }
 
 .project-info{
-	position: relative;
+	position: relative;   
 	float: left;
-	padding: 5px 0px;
+	padding: 10px 0px;
 	bottom: 0px;
-	width: inherit;
+	width: 100%;
 	background-color: #4abdac;
 }
 
@@ -114,7 +116,7 @@ header{
 	float: left;
 	width: 100%;
 	color: white;
-	font-size: 18px;
+	font-size: 4em;
 }
 
 .project-info p{
@@ -122,6 +124,7 @@ header{
 	float: left;
 	width: 100%;
 	color: white;
+	font-size: 4em;
 }
 
 .pop-up{
@@ -144,14 +147,14 @@ header{
 .close-btn{
 	cursor: pointer;
 	position: absolute;
-	width: 40px;
-	top: 5px;
-	right: 10px;
+	width: 100px;
+	top: 20px;
+	right: 25px;
 	transition: .1s;
 }
 
 .close-btn:hover{
-	top: 0px;
-	right: 5px;
-	width: 50px;
+	top: 10px;
+	right: 15px;
+	width: 120px;
 }

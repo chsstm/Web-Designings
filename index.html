@@ -3,7 +3,8 @@
 <head>
 	<title>Web Designings</title>
 	<link rel="icon" type="image/png" href="images/icon.png">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" >
+	<link rel="stylesheet" type="text/css" href="css/larger.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.fullscreen.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
@@ -12,31 +13,39 @@
 	<header>
 		<img class="logo-img" src="images/logo.png">
 		<h2 class="logo-text">CHSSTM WEB DESIGNINGS</h2>
-		<div class="filter-div">
+	</header>
+	<div class="filter-div">
+		<div class="filter-button-div">
 			<button class="all filter-btn">All Projects</button>
 			<button class="javascript filter-btn">JavaScript</button>
 			<button class="p5js filter-btn">p5.js Library</button>
 			<button class="unity filter-btn">Unity Engine</button>
 		</div>
-	</header>
-	<div class="container-wrapper">		
-		<div class="container">
-			<div id="container">
-				<!-- Contents load after web page loads -->
-				<div class="loading">
-					<style type="text/css">
-					.loading-icon{
-						width: 100px;
-					}
-					</style>
-					<img class="loading-icon" src="images/loading.gif">
-				</div>
-			</div>
+		<div class="filter-combo-div">
+			<select id="combo-filter">
+				<option value="all" selected>All Projects</option>
+				<option value="javascript">JavaScript</option>
+				<option value="p5js">p5.js Library</option>
+				<option value="unity">Unity Engine</option>
+			</select>
 		</div>
 	</div>
-	<div class="pop-up">
-		<iframe class="iframe"></iframe>
-		<img class="close-btn" src="images/cross.png">
+	<div class="container-wrapper">	
+		<div id="project-container">
+			<!-- Contents load after web page loads -->
+			<div class="loading">
+				<style type="text/css">
+				.loading-icon{
+					width: 100px;
+				}
+			</style>
+			<img class="loading-icon" src="images/loading.gif">
+		</div>
 	</div>
+</div>
+<div class="pop-up">
+	<iframe class="iframe"></iframe>
+	<img class="close-btn" src="images/cross.png">
+</div>
 </body>
 </html>

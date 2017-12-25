@@ -6,9 +6,9 @@ function popup(project){
 
 $(document).ready(function(){
 	$.ajax({url:"js/files.json",success: function(result){
-		$("#container").html("");
+		$("#project-container").html("");
 		result.forEach(function(project){
-			$("#container").append(
+			$("#project-container").append(
 				"<div class='project-wrapper project "+project.platform.toLowerCase().replace(".","")+"' onclick='popup(this)'>"+
 					"<input class='url' type='hidden' value='"+project.url+"'>"+
 					"<img class='project-icon' src='images/"+project.icon+"' onerror=\"this.src='images/demo.png'\">"+
@@ -20,8 +20,17 @@ $(document).ready(function(){
 				);		
 		});
 	}});
-
+	
 	$("#container").focus();
+
+	$("#combo-filter").change(function(){
+		switch($("#combo-filter").val()){
+			case 'all': $(".project").show(); break;
+			case 'javascript': $(".project").hide(); $(".javascript").show(); break;
+			case 'p5js': $(".project").hide(); $(".p5js").show(); break;
+			case 'unity': $(".project").hide(); $(".unity").show(); break;
+		}
+	});
 
 	$(".close-btn").click(function(){
 		$(".iframe").attr("src","");
