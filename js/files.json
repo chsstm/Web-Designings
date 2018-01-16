@@ -7,7 +7,7 @@
 	{"title": "Day Finder", "platform": "p5.js", "url": "DayFinder", "icon": "dayfinder.png"},
 	{"title": "Flappy Bird", "platform": "p5.js", "url": "FlappyBird", "icon": "flappybird.png"},
 	{"title": "Get Way", "platform": "p5.js", "url": "GetWay", "icon": "getway.png"},
-	{"title": "Go Race", "platform": "p5.js", "url": "gorace", "icon": "gorace.png"},
+	{"title": "Go Race", "platform": "p5.js", "url": "GoRace", "icon": "gorace.png"},
 	{"title": "Ice Pong", "platform": "p5.js", "url": "IcePong", "icon": "icepong.png"},
 	{"title": "Matrix Rain", "platform": "p5.js", "url": "MatrixRain", "icon": "matrixrain.png"},
 	{"title": "Maze", "platform": "p5.js", "url": "Maze", "icon": "maze.png"},
