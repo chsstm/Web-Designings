@@ -7,7 +7,6 @@ function popup(project){
 $(document).ready(function(){
 	$.ajax({url:"js/files.json",success: function(result){
 		$("#project-container").html("");
-		result = JSON.parse(result);
 		for(let i=0; i<result.length; i++){
 			let project = result[i];
 			$("#project-container").append(
