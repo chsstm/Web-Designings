@@ -7,7 +7,9 @@ function popup(project){
 $(document).ready(function(){
 	$.ajax({url:"js/files.json",success: function(result){
 		$("#project-container").html("");
-		result.forEach(function(project){
+		result = JSON.parse(result);
+		for(let i=0; i<result.length; i++){
+			let project = result[i];
 			$("#project-container").append(
 				"<div class='project-wrapper project "+project.platform.toLowerCase().replace(".","")+"' onclick='popup(this)'>"+
 					"<input class='url' type='hidden' value='"+project.url+"'>"+
@@ -18,7 +20,7 @@ $(document).ready(function(){
 					"</div>"+
 				"</div>"
 				);		
-		});
+		}
 	}});
 	
 	$("#container").focus();
