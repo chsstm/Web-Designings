@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Web Designings</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 	<link rel="icon" type="image/png" href="images/icon.png">
-	<link rel="stylesheet" type="text/css" href="css/index.css" >
-	<link rel="stylesheet" type="text/css" href="css/w3.css" >
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
 </head>
+
 <body>
-	<header class="w3-display-container w3-indigo" style="height: 120px;">
-		<img class="logo-img w3-left" src="images/logo.png" style="width: 5%;">
-		<img class="logo-text w3-left w3-image" src="images/logo-text.png">
+	<header>
+		<div>
+			<img class="logo-img" src="images/logo.png">
+			<h2 class="logo-text">CHSSTM WEB DESIGNINGS</h2>
+		</div>
+		<div class="filter-div">
+			<img id="menu-icon" src="images/burger_icon.png"/>
+			<div id="filter-buttons" class="filter-button-div">
+			</div>
+		</div>
 	</header>
-	<div class="filter-div">
-		<div class="filter-button-div w3-margin w3-center">
-			<button class="all filter-btn w3-btn w3-indigo">All Projects</button>
-			<button class="javascript filter-btn w3-btn w3-indigo">JavaScript</button>
-			<button class="p5js filter-btn w3-btn w3-indigo">p5.js Library</button>
-			<button class="unity filter-btn w3-btn w3-indigo">Unity Engine</button>
-		</div>
-		<div class="filter-combo-div">
-			<select id="combo-filter">
-				<option value="all" selected>All Projects</option>
-				<option value="javascript">JavaScript</option>
-				<option value="p5js">p5.js Library</option>
-				<option value="unity">Unity Engine</option>
-			</select>
-		</div>
-	</div>
-	<div class="container-wrapper">	
+	<div class="container-wrapper">
 		<div id="project-container">
 			<!-- Contents load after web page loads -->
 			<div class="loading">
 				<style type="text/css">
-				.loading-icon{
-					width: 100px;
-				}
-			</style>
-			<img class="loading-icon" src="images/loading.gif">
+					.loading-icon {
+						width: 100px;
+					}
+				</style>
+				<img class="loading-icon" src="images/loading.gif">
+			</div>
 		</div>
 	</div>
-</div>
-<div class="pop-up">
-	<iframe class="iframe"></iframe>
-	<img class="close-btn" src="images/cross.png">
-</div>
+	<footer>
+		&copy; at CHSSTM
+	</footer>
+	<div class="pop-up">
+		<iframe class="iframe"></iframe>
+		<img id="close-btn" class="close-btn" src="images/cross.png">
+	</div>
 </body>
+
 </html>

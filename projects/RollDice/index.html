@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ROLL THE DICE</title>
+    <script src="../../libraries/p5.js" type="text/javascript"></script>
+
+    <script src="../../libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="../../libraries/p5.sound.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+    <script src="HomeScreen.js" type="text/javascript"></script>
+    <script src="GameScreen.js" type="text/javascript"></script>
+    <script src="InfoScreen.js" type="text/javascript"></script>
+    <script src="player.js" type="text/javascript"></script>
+
+    <style> 
+      body {
+        user-select: none;
+        width: 100%;
+        height: 100vh;
+        padding: 0; 
+        margin: 0; 
+        background-image: url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+      } 
+      canvas {
+        vertical-align: top;
+        box-shadow: 0px 0px 50px grey;
+      } 
+
+      progress{
+        margin-left: -100px;
+        width: 200px;
+        height: 8px;
+      }
+
+      button{
+        cursor: pointer;
+        margin-left: -75px;
+        width: 150px;
+        height: 60px;
+        font-size: 24px;
+        color: white;
+        background-color: #238439;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+
+      button:disabled{
+        cursor: default;
+        background-color: grey;
+      }
+
+      button:active{
+        opacity: .8;
+      }
+
+      .red{
+        background-color: #EB4D4D;
+      }
+
+      .small-btn{
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+      }
+
+      input{
+        margin-left: -125px;
+        padding-left: 5px;
+        width: 250px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 2px solid #eb4d4d;
+        outline: none;
+      }
+
+      ol li{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
