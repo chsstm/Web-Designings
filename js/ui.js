@@ -2,6 +2,18 @@ function popup(project) {
 	$(".iframe").attr("src", "./projects/" + $(project).children().val() + "/");
 	$(".pop-up").fadeIn();
 	$(".iframe").focus();
+	
+	let elem = document.getElementById('iframe');
+	
+	if (elem.requestFullscreen) {
+	  elem.requestFullscreen();
+	} else if (elem.mozRequestFullScreen) { /* Firefox */
+	  elem.mozRequestFullScreen();
+ 	} else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+	  elem.webkitRequestFullscreen();
+	} else if (elem.msRequestFullscreen) { /* IE/Edge */
+	  elem.msRequestFullscreen();
+	}
 }
 
 function filterProject(type) {
