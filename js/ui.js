@@ -69,8 +69,12 @@ const closePopup = () => {
 }
 
 const onFullscreenChange = () => {
-	console.log('Fullscreen closed.')
-	closePopup();
+	if(this.isOpen){
+		this.isOpen = false;
+		closePopup();
+	}else{
+		this.isOpen = true;
+	}
 }
 
 $(document).ready(()=> {
