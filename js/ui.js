@@ -1,22 +1,20 @@
-function popup(project) {
+const popup = (project) => {
 	$(".iframe").attr("src", "./projects/" + $(project).children().val() + "/");
-	$(".pop-up").fadeIn();
-	$(".iframe").focus();
 	
 	let elem = document.getElementById('iframe');
 	
 	if (elem.requestFullscreen) {
-	  elem.requestFullscreen();
+	  elem.requestFullscreen().then(openPopup);
 	} else if (elem.mozRequestFullScreen) { /* Firefox */
-	  elem.mozRequestFullScreen();
+	  elem.mozRequestFullScreen().then(openPopup);
  	} else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-	  elem.webkitRequestFullscreen();
+	  elem.webkitRequestFullscreen().then(openPopup);
 	} else if (elem.msRequestFullscreen) { /* IE/Edge */
-	  elem.msRequestFullscreen();
+	  elem.msRequestFullscreen().then(openPopup);
 	}
 }
 
-function filterProject(type) {
+const filterProject = (type) => {
 	toggleMenu();
 	if (type === 'all') {
 		$(".project").show();
@@ -28,7 +26,7 @@ function filterProject(type) {
 	}
 }
 
-function toggleMenu() {
+const toggleMenu = () => {
 	if ($(".filter-button").hasClass("show-button")) {
 		setTimeout(function () {
 
@@ -41,12 +39,40 @@ function toggleMenu() {
 	$(".filter-button").toggleClass("hide-button");
 }
 
+const onCloseFullscreen = () => {
+	$(".iframe").attr("src", "");
+	$(".pop-up").fadeOut();
+}
 
-$(document).ready(function () {
+const openPopup = () => {
+	$(".pop-up").fadeIn();
+	$(".iframe").focus();
+	
+	$("#iframe").addEventListener("fullscreenchange", onFullscreenChange);
+	$("#iframe").addEventListener("mozfullscreenchange", onFullscreenChange);
+	$("#iframe").addEventListener("webkitfullscreenchange", onFullscreenChange);
+	$("#iframe").addEventListener("msfullscreenchange", onFullscreenChange);
+}
+
+const closePopup = () => {
+	$(".iframe").attr("src", "");
+	$(".pop-up").fadeOut();
+	
+	$("#iframe").removeEventListener("fullscreenchange", onFullscreenChange);
+	$("#iframe").removeEventListener("mozfullscreenchange", onFullscreenChange);
+	$("#iframe").removeEventListener("webkitfullscreenchange", onFullscreenChange);
+	$("#iframe").removeEventListener("msfullscreenchange", onFullscreenChange);
+}
+
+const onFullscreenChange = () => {
+	closePopup();
+}
+
+$(document).ready(()=> {
 	$.ajax({
-		url: "js/files.json", success: function (result) {
+		url: "js/files.json", success: (result) => {
 			$("#project-container").html("");
-			result.forEach(function (project) {
+			result.forEach((project) => {
 				$("#project-container").append(
 					"<div class='project-wrapper project " + project.platform.toLowerCase().replace(".", "") + "' onclick='popup(this)'>" +
 					"<input class='url' type='hidden' value='" + project.url + "'>" +
@@ -62,8 +88,8 @@ $(document).ready(function () {
 	});
 
 	$.ajax({
-		url: "js/filter.json", success: function (result) {
-			result.filters.forEach(function (filter) {
+		url: "js/filter.json", success: (result) => {
+			result.filters.forEach((filter) => {
 				$("#filter-buttons").append(
 					"<button id='" + filter.id + "' class='filter-button hide-button' onclick='filterProject(\"" + filter.id + "\")'>" + filter.name + "</button>"
 				);
@@ -73,8 +99,5 @@ $(document).ready(function () {
 
 	$("#menu-icon").click(toggleMenu);
 
-	$("#close-btn").click(function () {
-		$(".iframe").attr("src", "");
-		$(".pop-up").fadeOut();
-	});
+	$("#close-btn").click(closePopup);
 });
