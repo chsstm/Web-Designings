@@ -48,17 +48,21 @@ const openPopup = () => {
 	$(".pop-up").fadeIn();
 	$(".iframe").focus();
 	
-	$("#iframe").addEventListener("fullscreenchange", onFullscreenChange);
-	$("#iframe").addEventListener("mozfullscreenchange", onFullscreenChange);
-	$("#iframe").addEventListener("webkitfullscreenchange", onFullscreenChange);
-	$("#iframe").addEventListener("msfullscreenchange", onFullscreenChange);
+	let elem = document.getElementById('iframe');
+	
+	elem.addEventListener("fullscreenchange", onFullscreenChange);
+	elem.addEventListener("mozfullscreenchange", onFullscreenChange);
+	elem.addEventListener("webkitfullscreenchange", onFullscreenChange);
+	elem.addEventListener("msfullscreenchange", onFullscreenChange);
 }
 
-const closePopup = () => {	
-	$("#iframe").removeEventListener("fullscreenchange", onFullscreenChange);
-	$("#iframe").removeEventListener("mozfullscreenchange", onFullscreenChange);
-	$("#iframe").removeEventListener("webkitfullscreenchange", onFullscreenChange);
-	$("#iframe").removeEventListener("msfullscreenchange", onFullscreenChange);
+const closePopup = () => {		
+	let elem = document.getElementById('iframe');
+	
+	elem.removeEventListener("fullscreenchange", onFullscreenChange);
+	elem.removeEventListener("mozfullscreenchange", onFullscreenChange);
+	elem.removeEventListener("webkitfullscreenchange", onFullscreenChange);
+	elem.removeEventListener("msfullscreenchange", onFullscreenChange);
 	
 	$(".iframe").attr("src", "");
 	$(".pop-up").fadeOut();
