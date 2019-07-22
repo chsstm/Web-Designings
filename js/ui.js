@@ -54,17 +54,18 @@ const openPopup = () => {
 	$("#iframe").addEventListener("msfullscreenchange", onFullscreenChange);
 }
 
-const closePopup = () => {
-	$(".iframe").attr("src", "");
-	$(".pop-up").fadeOut();
-	
+const closePopup = () => {	
 	$("#iframe").removeEventListener("fullscreenchange", onFullscreenChange);
 	$("#iframe").removeEventListener("mozfullscreenchange", onFullscreenChange);
 	$("#iframe").removeEventListener("webkitfullscreenchange", onFullscreenChange);
 	$("#iframe").removeEventListener("msfullscreenchange", onFullscreenChange);
+	
+	$(".iframe").attr("src", "");
+	$(".pop-up").fadeOut();
 }
 
 const onFullscreenChange = () => {
+	console.log('Fullscreen closed.')
 	closePopup();
 }
 
